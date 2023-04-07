@@ -1,0 +1,22 @@
+h1 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
+  background: linear-gradient(to left, violet, indigo, blue, green, orange, yellow, red, violet);
+  background-repeat: repeat-x;
+  background-size: 200% auto;
+  display: inline-block;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s linear infinite;
+}
+
+@keyframes rainbow_animation {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
