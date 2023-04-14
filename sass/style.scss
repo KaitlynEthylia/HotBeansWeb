@@ -4,10 +4,12 @@
 @import "header.scss";
 @import "palette.scss";
 
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 * {
 	padding: 0;
 	margin: 0;
-	font-family: sans-serif;
+	font-family: "raleway", sans-serif;
 	vertical-align: middle;
 	transition: filter 0.4s;
 }

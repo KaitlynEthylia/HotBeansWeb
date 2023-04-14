@@ -1,11 +1,32 @@
 header {
 	display: flex;
+	flex-wrap: nowrap;
 
 	span {
 		display: flex;
 		flex-grow: 1;
 		align-items: center;
 
-		&:last-child { justify-content: right; }
+		&:last-child { 
+			justify-content: right;
+
+			a {
+				word-wrap: break-word;
+				font-size: 14pt;
+
+				img {
+					height: 1em;
+					margin: 0.5em;
+				}
+
+				&:after {
+					content: 'Incompatible browser? Visit the old site here!';
+
+					@media only screen and (max-width: 767px) {
+						content: 'Incompatible browser?';
+					}
+				}
+			}
+		}
 	}
 }

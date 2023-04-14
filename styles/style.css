@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 nav {
   position: fixed;
   top: 0;
@@ -75,6 +76,7 @@ html:not(.dark) nav > span img.icon-light {
 
 header {
   display: flex;
+  flex-wrap: nowrap;
 }
 header span {
   display: flex;
@@ -83,6 +85,22 @@ header span {
 }
 header span:last-child {
   justify-content: right;
+}
+header span:last-child a {
+  word-wrap: break-word;
+  font-size: 14pt;
+}
+header span:last-child a img {
+  height: 1em;
+  margin: 0.5em;
+}
+header span:last-child a:after {
+  content: "Incompatible browser? Visit the old site here!";
+}
+@media only screen and (max-width: 767px) {
+  header span:last-child a:after {
+    content: "Incompatible browser?";
+  }
 }
 
 :root {
@@ -93,7 +111,7 @@ header span:last-child {
 * {
   padding: 0;
   margin: 0;
-  font-family: sans-serif;
+  font-family: "raleway", sans-serif;
   vertical-align: middle;
   transition: filter 0.4s;
 }
