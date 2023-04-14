@@ -1,45 +1,126 @@
+nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: #eee;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: right 0.4s ease-in-out, top 0.4s ease-in-out;
+}
+nav.open {
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  nav {
+    width: 100vw;
+    right: 0;
+    top: -100%;
+  }
+  nav.open {
+    top: 0;
+  }
+}
+nav a {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+nav a * {
+  padding: 0.1em;
+}
+nav a h2 {
+  flex-grow: 1;
+}
+nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+nav div a {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+nav div a img {
+  margin: 0.5em;
+  height: 1.5em;
+}
+
+nav > span img {
+  height: 2em;
+  transition: translate ease-in-out 0.4s, opacity 0.4s, filter 0.4s;
+  cursor: pointer;
+}
+
+.dark nav > span img {
+  translate: 50%;
+}
+.dark nav > span img.icon-dark {
+  opacity: 0;
+}
+
+html:not(.dark) nav > span img {
+  translate: -50%;
+}
+html:not(.dark) nav > span img.icon-light {
+  opacity: 0;
+}
+
+.dark img:not(.noinvert) {
+  filter: invert(1);
+}
+
+header {
+  display: flex;
+}
+header span {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+header span:last-child {
+  justify-content: right;
+}
+
+:root {
+  font-size: 16pt;
+  font-family: "futura", arial, sans-serif;
+}
+
 * {
   padding: 0;
   margin: 0;
+  font-family: sans-serif;
+  vertical-align: middle;
+  transition: filter 0.4s;
 }
 
-html {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+h1, h2 {
+  font-style: italic;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+button {
+  margin: 1em;
+  border: none;
+  border-radius: 1em;
+  cursor: pointer;
+}
+
+section {
   height: 100vh;
+  box-sizing: border-box;
 }
 
-h1 {
-  font-family: "Comic Sans MS", "Comic Sans", cursive, sans-serif;
-  font-size: 5rem;
-  text-align: center;
-  background: linear-gradient(-45deg, violet, violet, indigo, blue, green, orange, yellow, red, violet, violet);
-  background-repeat: repeat-x;
-  background-size: 200% auto;
-  display: inline-block;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  animation: anim 6s linear infinite;
-}
-
-@keyframes anim {
-  0% {
-    background-position: 0 0;
-  }
-  25% {
-    transform: rotate(30deg) scale(2);
-  }
-  50% {
-    transform: scale(1);
-  }
-  75% {
-    transform: rotate(-30deg) scale(2);
-  }
-  100% {
-    background-position: 200% 0;
-  }
+img {
+  height: 3em;
 }
 
 /*# sourceMappingURL=style.css.map */

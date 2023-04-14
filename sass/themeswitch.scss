@@ -1,0 +1,21 @@
+nav > span img {
+	height: 2em;
+	transition: translate ease-in-out 0.4s, opacity 0.4s, filter 0.4s;
+	cursor: pointer;
+}
+
+.dark nav > span img {
+	translate: 50%;
+
+	&.icon-dark {
+		opacity: 0;
+	}
+}
+
+html:not(.dark) nav > span img {
+	translate: -50%;
+
+	&.icon-light {
+		opacity: 0;
+	}
+}
