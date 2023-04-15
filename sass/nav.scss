@@ -21,6 +21,7 @@ nav {
 	@media only screen and (max-width: 767px) {
 		width: 100vw;
 		right: 0;
+		left: 0;
 		top: -100%;
 
 		&.open {

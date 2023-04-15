@@ -17,6 +17,7 @@ nav.open {
   nav {
     width: 100vw;
     right: 0;
+    left: 0;
     top: -100%;
   }
   nav.open {
@@ -83,6 +84,14 @@ header span {
   flex-grow: 1;
   align-items: center;
 }
+@media only screen and (max-width: 767px) {
+  header span:first-child img {
+    height: 2rem;
+  }
+  header span:first-child h1 {
+    font-size: 1.5rem;
+  }
+}
 header span:last-child {
   justify-content: right;
 }
@@ -99,7 +108,7 @@ header span:last-child a:after {
 }
 @media only screen and (max-width: 767px) {
   header span:last-child a:after {
-    content: "Incompatible browser?";
+    content: "Old site";
   }
 }
 
