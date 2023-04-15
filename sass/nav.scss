@@ -11,8 +11,14 @@ nav {
 	flex-direction: column;
 	align-items: center;
 
-	transition: right 0.4s ease-in-out,
-		top 0.4s ease-in-out;
+	transition: 
+		right 0.4s ease-in-out,
+		top 0.4s ease-in-out,
+		visibility 0.4s;
+
+	&:not(.open) {
+		visibility: hidden;
+	}
 
 	&.open {
 		right: 0;
