@@ -13,7 +13,7 @@ function setAppropriateTheme(preferredTheme) {
 
 var switchlist = document.getElementsByClassName("theme-switcher");
 
-for (var i = 0; i < list.length; i++) {
+for (var i = 0; i < switchlist.length; i++) {
 	var list = switchlist[i].children;
 
 	for (let i = 0; i < list.length; i++) {

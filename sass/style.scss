@@ -1,21 +1,13 @@
 @import "nav.scss";
 @import "themeswitch.scss";
-@import "theme-dark.scss";
 @import "header.scss";
 @import "palette.scss";
-
-@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 * {
 	padding: 0;
 	margin: 0;
-	font-family: "raleway", sans-serif;
 	vertical-align: middle;
 	transition: filter 0.4s;
-}
-
-h1, h2 {
-	font-style: italic;
 }
 
 a {
@@ -24,15 +16,20 @@ a {
 }
 
 button {
-	margin: 1em;
+	padding: 0.2em;
+	margin: 0.8em;
 	border: none;
 	border-radius: 1em;
 	cursor: pointer;
+	background-color: #0000;
+	&:hover { translate: 0 -2%; }
+	&:active { translate: 0 2%; }
 }
 
 section {
 	height: 100vh;
 	box-sizing: border-box;
+	background-color: var(--background1);
 }
 
 img {

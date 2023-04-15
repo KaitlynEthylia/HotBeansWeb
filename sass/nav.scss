@@ -3,7 +3,8 @@ nav {
 	top: 0;
 	right: -100%;
 
-	background-color: #eee;
+	background-color: var(--background3);
+	box-shadow: var(--shadow-light);
 
 	height: 100vh;
 

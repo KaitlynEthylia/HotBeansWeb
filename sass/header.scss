@@ -2,6 +2,13 @@ header {
 	display: flex;
 	flex-wrap: nowrap;
 
+	position: fixed;
+	top: 0;
+	width: 100%;
+
+	box-shadow: var(--shadow-light); 
+	background-color: var(--background2);
+
 	span {
 		display: flex;
 		flex-grow: 1;

@@ -1,5 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 :root {
 	font-size: 16pt;
-	font-family: 'futura', arial, sans-serif;
+	font-family: "opensans", sans-serif;
+
+	h1, h2 {
+		font-family: "raleway", sans-serif;
+		font-style: italic;
+	}
+
+	--shadow-light: -0.1em 0px 0.3em 0.2em #0002;
+	--background1: #ffffff;
+	--background2: #f7f7f7;
+	--background3: #efefef;
+	--text-colour: #000000;
+
+	h1, h2, a, p {
+		color: var(--text-colour);
+	}
+
+	div, nav, header, section, button {
+		transition: background-color 0.4s;
+	}
 }
 
+.dark {
+	--background1: #151311;
+	--background2: #282420;
+	--background3: #302924;
+	--text-colour: #eeeeee;
+
+	img:not(.noinvert) {
+		filter: invert(1);
+	}
+}
