@@ -1,10 +1,10 @@
-nav > span img {
+.theme-switcher img {
 	height: 2em;
 	transition: translate ease-in-out 0.4s, opacity 0.4s, filter 0.4s;
 	cursor: pointer;
 }
 
-.dark nav > span img {
+.dark .theme-switcher img {
 	translate: 50%;
 
 	&.icon-dark {
@@ -12,7 +12,7 @@ nav > span img {
 	}
 }
 
-html:not(.dark) nav > span img {
+html:not(.dark) .theme-switcher img {
 	translate: -50%;
 
 	&.icon-light {

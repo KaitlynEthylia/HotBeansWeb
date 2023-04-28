@@ -3,7 +3,7 @@ var list = document.getElementsByClassName("nav");
 for (var i = 0; i < list.length; i++) {
 	list[i].addEventListener("click", function(event) {
 		event.preventDefault();
-		let nav = document.querySelector("nav");
+		let nav = document.querySelector("hbw-nav");
 		nav.classList.toggle("open");
 	});
 }

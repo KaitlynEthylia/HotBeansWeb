@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>HotBeans Web!</title>
+	<title>Fast and Responisve Websites Built By Experts | HotBeans Web</title>
 
 	<meta charset="UTF-8" />
 	<meta http-equiv="x-ua-compatible" content="ie-edge">
@@ -21,63 +21,36 @@
 	<meta property="og:image:alt" content="hotbeans">
 	<meta property="og:image:width" content="1280">
 	<meta property="og:image:height" content="675">
-	<link rel="canonical" href="https://hotbeansweb">
+	<link rel="canonical" href="https://hotbeansweb.com">
 	<link rel="stylesheet" href="styles/style.css">
 	<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+	<script src="scripts/webcomponents/hbw-header.js"></script>
+	<script src="scripts/webcomponents/hbw-nav.js"></script>
 
 </head>
 
 <body>
-	<header>
-		<span>
-			<img src="assets/hotbeansweb.svg" class="noinvert">
-			<h1>hotbeans</h1>
-		</span>
-		<span>
-			<a href="old"><img src="assets/arrow-right.svg"></img></a>
-			<button class="nav">
-				<img src="assets/menu.svg"></img>
-			</button>
-		</span>
-	</header>
-	<nav>
-		<a href="">
-			<img src="assets/hotbeansweb.svg" class="noinvert"></img>
-			<h2>hotbeans</h2>
-			<button class="nav">
-				<img src="assets/close.svg"></img>
-			</button>
-		</a>
-		<span class="theme-switcher">
-			<img src="assets/theme-light.svg" class="icon-light"><img src="assets/theme-dark.svg" class="icon-dark">
-		</span>
-		<div>
-			<a href="">
-				<img src="assets/about.svg"></img>
-				about us
-			</a>
-			<a href="">
-				<img src="assets/learn.svg"></img>
-				learn
-			</a>
-			<a href="">
-				<img src="assets/team.svg"></img>
-				meet the team
-			</a>
-			<a href="">
-				<img src="assets/jobs.svg"></img>
-				jobs
-			</a>
-			<a href="">
-				<img src="assets/contact.svg"></img>
-				contact
-			</a>
+	<hbw-header></hbw-header>
+	<hbw-nav></hbw-nav>
+	<section id="home">
+	</section>
+	<section id="about">
+	</section>
+	<section class="columnar" id="learn">
+		<div class="panel">
 		</div>
-	</nav>
-	<section>
+		<div class="panel">
+		</div>
+		<div class="panel">
+		</div>
 	</section>
-	<section>
+	<section id="team">
 	</section>
+	<section id="jobs">
+	</section>
+	<section id="contact">
+	</section>
+
 
 	<script src="scripts/nav.js"></script>
 	<script src="scripts/theme.js"></script>

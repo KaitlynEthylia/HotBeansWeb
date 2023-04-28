@@ -1,0 +1,43 @@
+hbw-header {
+  display: flex;
+  flex-wrap: nowrap;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  box-shadow: var(--shadow-light);
+  background-color: var(--background2);
+}
+hbw-header span {
+  display: flex;
+  flex-grow: 1;
+  align-items: center;
+}
+@media only screen and (max-width: 767px) {
+  hbw-header span:first-child img {
+    height: 2rem;
+  }
+  hbw-header span:first-child h1 {
+    font-size: 1.5rem;
+  }
+}
+hbw-header span:last-child {
+  justify-content: right;
+}
+hbw-header span:last-child a {
+  word-wrap: break-word;
+  font-size: 14pt;
+}
+hbw-header span:last-child a img {
+  height: 1em;
+  margin: 0.5em;
+}
+hbw-header span:last-child a:after {
+  content: "Incompatible browser? Visit the old site here!";
+}
+@media only screen and (max-width: 767px) {
+  hbw-header span:last-child a:after {
+    content: "Old site";
+  }
+}
+
+/*# sourceMappingURL=header.css.map */

@@ -1,0 +1,77 @@
+.theme-switcher img {
+  height: 2em;
+  transition: translate ease-in-out 0.4s, opacity 0.4s, filter 0.4s;
+  cursor: pointer;
+}
+
+.dark .theme-switcher img {
+  translate: 50%;
+}
+.dark .theme-switcher img.icon-dark {
+  opacity: 0;
+}
+
+html:not(.dark) .theme-switcher img {
+  translate: -50%;
+}
+html:not(.dark) .theme-switcher img.icon-light {
+  opacity: 0;
+}
+
+hbw-nav {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  background-color: var(--background3);
+  box-shadow: var(--shadow-light);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: right 0.4s ease-in-out, top 0.4s ease-in-out, visibility 0.4s;
+}
+hbw-nav:not(.open) {
+  visibility: hidden;
+}
+hbw-nav.open {
+  right: 0;
+}
+@media only screen and (max-width: 767px) {
+  hbw-nav {
+    width: 100vw;
+    right: 0;
+    left: 0;
+    top: -100%;
+  }
+  hbw-nav.open {
+    top: 0;
+  }
+}
+hbw-nav a {
+  display: flex;
+  width: 100%;
+  align-items: center;
+}
+hbw-nav a * {
+  padding: 0.1em;
+}
+hbw-nav a h2 {
+  flex-grow: 1;
+}
+hbw-nav div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+hbw-nav div a {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+hbw-nav div a img {
+  margin: 0.5em;
+  height: 1.5em;
+}
+
+/*# sourceMappingURL=nav.css.map */

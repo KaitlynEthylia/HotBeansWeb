@@ -1,8 +1,9 @@
-header {
+hbw-header {
 	display: flex;
 	flex-wrap: nowrap;
 
-	position: fixed;
+	position: sticky;
+
 	top: 0;
 	width: 100%;
 

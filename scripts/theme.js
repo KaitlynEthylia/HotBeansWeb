@@ -1,6 +1,6 @@
 const html = document.querySelector("html");
 
-const preferredTheme = window.matchMedia("prefers-color-scheme: dark");
+const preferredTheme = window.matchMedia("(prefers-color-scheme: dark)");
 setAppropriateTheme(preferredTheme);
 
 preferredTheme.addEventListener("change", preferredTheme);

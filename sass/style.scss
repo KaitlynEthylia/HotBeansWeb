@@ -1,6 +1,3 @@
-@import "nav.scss";
-@import "themeswitch.scss";
-@import "header.scss";
 @import "palette.scss";
 
 * {
@@ -27,9 +24,25 @@ button {
 }
 
 section {
-	height: 100vh;
+	height: calc(100vh - var(--header-height));
 	box-sizing: border-box;
 	background-color: var(--background1);
+}
+
+.columnar {
+	display: flex;
+	padding: 2vw;
+
+	& > div {
+		flex-grow: 1;
+	}
+}
+
+.panel {
+	background-color: var(--background3);
+	margin: 2vw;
+	border-radius: 1em;
+	box-shadow: var(--shadow-wide);
 }
 
 img {
