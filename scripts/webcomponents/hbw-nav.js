@@ -1,35 +1,35 @@
 class HBWNav extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
-			<a href="index.html#home">
-				<img src="assets/hotbeansweb.svg" class="noinvert"></img>
+			<a onclick="closeNav()" href="index.html#home">
+				<img src="assets/hotbeansweb.svg"></img>
 				<h2>hotbeans</h2>
 				<button class="nav">
-					<img src="assets/close.svg"></img>
+					<img class="invert" src="assets/close.svg"></img>
 				</button>
 			</a>
 			<span class="theme-switcher">
-				<img src="assets/theme-light.svg" class="icon-light"><img src="assets/theme-dark.svg" class="icon-dark">
+				<img src="assets/theme-light.svg" class="invert icon-light"><img src="assets/theme-dark.svg" class="invert icon-dark">
 			</span>
 			<div>
-				<a href="index.html#about">
-					<img src="assets/about.svg"></img>
+				<a onclick="closeNav()" href="index.html#about">
+					<img class="invert" src="assets/about.svg"></img>
 					about us
 				</a>
-				<a href="index.html#learn">
-					<img src="assets/learn.svg"></img>
+				<a onclick="closeNav()" href="index.html#learn">
+					<img class="invert" src="assets/learn.svg"></img>
 					learn
 				</a>
-				<a href="index.html#team">
-					<img src="assets/team.svg"></img>
+				<a onclick="closeNav()" href="index.html#team">
+					<img class="invert" src="assets/team.svg"></img>
 					meet the team
 				</a>
-				<a href="index.html#jobs">
-					<img src="assets/jobs.svg"></img>
+				<a onclick="closeNav()" href="index.html#jobs">
+					<img class="invert" src="assets/jobs.svg"></img>
 					jobs
 				</a>
-				<a href="index.html#contact">
-					<img src="assets/contact.svg"></img>
+				<a onclick="closeNav()" href="index.html#contact">
+					<img class="invert" src="assets/contact.svg"></img>
 					contact
 				</a>
 			</div>

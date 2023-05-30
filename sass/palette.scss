@@ -1,42 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 :root {
-	scroll-behavior: smooth;
-	scroll-padding-top: var(--header-height);
+	font-size: 16pt;
+	@media only screen and (max-width: 767px) {
+		font-size: 14pt;
+	}
 
 	--header-height: 3em;
 
-	font-size: 16pt;
-	font-family: "opensans", sans-serif;
-
-	h1, h2 {
-		font-family: "raleway", sans-serif;
-		font-style: italic;
-	}
-
 	--shadow-light: -0.1em 0px 0.3em 0.2em #0002;
 	--shadow-wide: -0.1em 0.1em 1em 0.2em rgb(var(--background3) / 0.7);
+
 	--background1: #ffffff;
 	--background2: #f7f7f7;
 	--background3: #efefef;
+
 	--text-colour: #000000;
-
-	h1, h2, a, p {
-		color: var(--text-colour);
-	}
-
-	div, header, section, button {
-		transition: background-color 0.4s;
-	}
+	--text-faded: #444444;
 }
 
 .dark {
 	--background1: #151311;
 	--background2: #282420;
 	--background3: #302924;
-	--text-colour: #eeeeee;
 
-	img:not(.noinvert) {
+	--text-colour: #eeeeee;
+	--text-faded: #cccccc;
+
+	img.invert {
 		filter: invert(1);
 	}
 }

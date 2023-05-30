@@ -1,0 +1,44 @@
+#about {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+	div {
+		display: flex;
+		align-items: center;
+
+		&:last-child {
+			flex-direction: row-reverse;
+			text-align: right;
+		}
+
+		img {
+			width: 30vw;
+			height: auto;
+			aspect-ratio: 16 / 9;
+			padding: 0.5em;
+			margin: 1em;
+			border-radius: 2em;
+			background-color: var(--background2);
+		}
+		
+		p {
+			padding: 2em;
+			line-height: 1.5;
+			font-size: 1.2rem;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		height: auto;
+		justify-content: flex-start;
+
+		div, div:last-child {
+			flex-direction: column;
+			img {
+				width: 90%;
+			}
+		}
+	}
+
+}

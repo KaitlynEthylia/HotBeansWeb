@@ -10,6 +10,8 @@ hbw-header {
 	box-shadow: var(--shadow-light); 
 	background-color: var(--background2);
 
+	z-index: 10;
+
 	span {
 		display: flex;
 		flex-grow: 1;
@@ -35,10 +37,10 @@ hbw-header {
 				}
 
 				&:after {
-					content: 'Incompatible browser? Visit the old site here!';
+					content: 'What is this website? Find out here';
 
 					@media only screen and (max-width: 767px) {
-						content: 'Old site';
+						content: 'What is this site?';
 					}
 				}
 			}

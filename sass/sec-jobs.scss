@@ -1,0 +1,175 @@
+#jobs {
+	display: flex;
+
+	#job-info {
+		background-color: var(--background2);
+		box-shadow: var(--shadow-light);
+		margin: 1em;
+		padding: 1em;
+		border-radius: 1.5em;
+
+		img {
+			border-radius: 1em;
+			height: 8em;
+			float: right;
+			box-shadow: var(--shadow-light);
+		}
+
+		span, p, ul {
+			margin-left: 1em;
+			padding-bottom: 2em;
+		}
+
+		width: 45%;
+	}
+
+	form {
+		width: 55%;
+		display: grid;
+		grid-template-rows: 4fr 1fr;
+		grid-template-columns: 1fr 1fr;
+		height: 40vh;
+
+		div {
+			display: flex;
+			flex-direction: column;
+
+			textarea, input[type="date"], input[type="text"], input[type="tel"], input[type="email"], input[type="submit"], input::file-selector-button {
+				background-color: var(--background2);
+				border: 2px solid var(--background3);
+				box-shadow: var(--shadow-wide);
+				font-size: 0.8rem;
+				padding: 0.3em;
+				border-radius: 1em;
+			}
+
+			input[type="submit"], input::file-selector-button {
+				&:hover {
+					color: var(--text-faded);
+					cursor: pointer;
+				}
+
+				&:active {
+				}
+			}
+
+			textarea {
+				height: auto;
+				flex-grow: 2;
+
+				&:disabled {
+					background-color: var(--background3);
+				}
+			}
+
+			span {
+				display: flex; 
+				&> * { width: 50%; }
+			}
+
+			&> * {
+				margin: 0.2em;
+				width: 90%;
+			}
+
+			div {
+				label {
+					text-align: right;
+					font-weight: bold;
+					font-style: italic;
+					input { float: left; }
+				}
+
+				display: flex;
+				flex-direction: column;
+			}
+
+			&:last-child {
+				align-items: center;
+				grid-column: 1 / 3;
+
+
+				&> * { width: 96%; }
+				input[type="file"] { float: right; }
+
+				hr {
+					width: 80%;
+					margin: 0.5em;
+				}
+
+				tt { 
+					font-family: monospace;
+					color: var(--text-faded);
+					font-size: 0.8rem;
+				}
+			}
+		}
+	}
+
+	#application-modal {
+		visibility: collapse;
+		position: fixed;
+		background-color: #0008;
+		top: 0;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		div {
+			width: 40%;
+			text-align: center;
+			border-radius: 1em;
+			padding: 1em;
+			background-color: var(--background3);
+			box-shadow: var(--shadow-light);
+
+			* { margin-bottom: 1.5em; }
+		}
+
+		&.modal {
+			visibility: visible;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		flex-direction: column;
+		height: 350vh;
+		align-items: center;
+
+		form, #job-info {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+		}
+	}
+}
+
+:host {
+	box-shadow: var(--shadow-light);
+	background-color: var(--background2);
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	hr {
+		width: 80%;
+	}
+			
+	small {
+		text-align: center;
+		padding: 1em;
+	}
+
+	div {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		* {
+			margin: 0.5em;
+		}
+	}
+}

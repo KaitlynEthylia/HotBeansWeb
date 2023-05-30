@@ -1,0 +1,21 @@
+.theme-switcher img {
+  height: 2em;
+  transition: translate ease-in-out 0.4s, opacity 0.4s, filter 0.4s;
+  cursor: pointer;
+}
+
+.dark .theme-switcher img {
+  translate: 50%;
+}
+.dark .theme-switcher img.icon-dark {
+  opacity: 0;
+}
+
+html:not(.dark) .theme-switcher img {
+  translate: -50%;
+}
+html:not(.dark) .theme-switcher img.icon-light {
+  opacity: 0;
+}
+
+/*# sourceMappingURL=themeswitch.css.map */

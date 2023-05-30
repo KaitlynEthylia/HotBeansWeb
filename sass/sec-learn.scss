@@ -1,0 +1,39 @@
+#learn {
+	justify-content: center;
+
+	fw-course {
+		margin: 1.5em;
+		border-radius: 1.5em;
+		height: calc(100vh - 3em - var(--header-height));
+
+		hr {
+			box-shadow: var(--shadow-light);
+		}
+
+		p {
+			margin: 1em;
+			font-style: italic;
+			color: var(--text-faded);
+		}
+		
+		iframe {
+			aspect-ratio: 16 / 9;
+			width: calc(100% - 3em);
+			height: auto;
+
+			border-radius: 1em;
+			margin: 0.5em;
+
+			box-shadow: var(--shadow-light);
+		}
+
+		a {
+			font-weight: bold;
+		}
+	}
+
+	@media only screen and (max-width: 767px) {
+		height: auto;
+		justify-content: flex-start;
+	}
+}

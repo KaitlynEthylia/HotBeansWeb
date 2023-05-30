@@ -1,0 +1,59 @@
+#contact {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+#contact h2 {
+  font-size: 3rem;
+}
+#contact div {
+  display: flex;
+  align-items: center;
+  height: 60vh;
+}
+#contact div a {
+  padding: 2vh;
+}
+#contact div a img {
+  filter: saturate(0) brightness(0.1);
+}
+#contact div a::before, #contact div a::after {
+  position: fixed;
+  left: calc(-50vw + 50%);
+  width: 100vw;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.4s;
+  text-align: center;
+  color: var(--color);
+}
+#contact div a::before {
+  content: var(--name);
+  top: 12vh;
+  font-size: 4vh;
+  font-weight: bolder;
+}
+#contact div a::after {
+  content: var(--subtitle);
+  top: 18vh;
+}
+#contact div a:hover::before, #contact div a:hover::after {
+  visibility: visible;
+  opacity: 1;
+}
+#contact div a:hover img {
+  filter: none;
+}
+
+.dark #contact div a img {
+  filter: saturate(0) brightness(8);
+}
+.dark #contact div a:hover img {
+  filter: none;
+}
+.dark #contact div a:hover img.lighten {
+  filter: saturate(1) brightness(2);
+}
+
+/*# sourceMappingURL=sec-contact.css.map */

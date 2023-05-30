@@ -1,0 +1,71 @@
+#contact {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+
+	h2 {
+		font-size: 3rem;
+	}
+
+	div {
+		display: flex;
+		align-items: center;
+		height: 60vh;
+		a {
+			padding: 2vh;
+
+			img {
+				filter: saturate(0) brightness(0.1);
+			}
+
+			&::before, &::after {
+				position: fixed;
+				left: calc(-50vw + 50%);
+				width: 100vw;
+				
+				visibility: hidden;
+				opacity: 0;
+				transition: opacity 0.4s;
+				text-align: center;
+				color: var(--color);
+			}
+
+			&::before {
+				content: var(--name);
+				top: 12vh;
+
+				font-size: 4vh;
+				font-weight: bolder;
+			}
+			&::after {
+				content: var(--subtitle);
+				top: 18vh;
+			}
+		}
+
+		a:hover {
+			&::before, &::after {
+				visibility: visible;
+				opacity: 1;
+			}
+
+			img {
+				filter: none;
+			}
+		}
+	}
+}
+.dark #contact div a {
+	img {
+	filter: saturate(0) brightness(8);
+	}
+
+	&:hover img {
+		filter: none;
+
+		&.lighten {
+			filter: saturate(1) brightness(2);
+		}
+	}
+}

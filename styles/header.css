@@ -6,6 +6,7 @@ hbw-header {
   width: 100%;
   box-shadow: var(--shadow-light);
   background-color: var(--background2);
+  z-index: 10;
 }
 hbw-header span {
   display: flex;
@@ -32,11 +33,11 @@ hbw-header span:last-child a img {
   margin: 0.5em;
 }
 hbw-header span:last-child a:after {
-  content: "Incompatible browser? Visit the old site here!";
+  content: "What is this website? Find out here";
 }
 @media only screen and (max-width: 767px) {
   hbw-header span:last-child a:after {
-    content: "Old site";
+    content: "What is this site?";
   }
 }
 

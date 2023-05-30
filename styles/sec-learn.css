@@ -1,0 +1,35 @@
+#learn {
+  justify-content: center;
+}
+#learn fw-course {
+  margin: 1.5em;
+  border-radius: 1.5em;
+  height: calc(100vh - 3em - var(--header-height));
+}
+#learn fw-course hr {
+  box-shadow: var(--shadow-light);
+}
+#learn fw-course p {
+  margin: 1em;
+  font-style: italic;
+  color: var(--text-faded);
+}
+#learn fw-course iframe {
+  aspect-ratio: 16/9;
+  width: calc(100% - 3em);
+  height: auto;
+  border-radius: 1em;
+  margin: 0.5em;
+  box-shadow: var(--shadow-light);
+}
+#learn fw-course a {
+  font-weight: bold;
+}
+@media only screen and (max-width: 767px) {
+  #learn {
+    height: auto;
+    justify-content: flex-start;
+  }
+}
+
+/*# sourceMappingURL=sec-learn.css.map */

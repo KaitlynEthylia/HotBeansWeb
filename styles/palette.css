@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+:root {
+  font-size: 16pt;
+  --header-height: 3em;
+  --shadow-light: -0.1em 0px 0.3em 0.2em #0002;
+  --shadow-wide: -0.1em 0.1em 1em 0.2em rgb(var(--background3) / 0.7);
+  --background1: #ffffff;
+  --background2: #f7f7f7;
+  --background3: #efefef;
+  --text-colour: #000000;
+  --text-faded: #444444;
+}
+@media only screen and (max-width: 767px) {
+  :root {
+    font-size: 14pt;
+  }
+}
+
+.dark {
+  --background1: #151311;
+  --background2: #282420;
+  --background3: #302924;
+  --text-colour: #eeeeee;
+  --text-faded: #cccccc;
+}
+.dark img.invert {
+  filter: invert(1);
+}
+
+/*# sourceMappingURL=palette.css.map */

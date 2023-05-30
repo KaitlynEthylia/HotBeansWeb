@@ -2,13 +2,12 @@ class HBWHeader extends HTMLElement {
 	connectedCallback() {
 		this.innerHTML = `
 			<span>
-				<img src="assets/hotbeansweb.svg" class="noinvert">
+				<img src="assets/hotbeansweb.svg">
 				<h1>hotbeans</h1>
-			</span>
 			<span>
-				<a href="old"><img src="assets/arrow-right.svg"></img></a>
+				<a href="info.html"><img class="invert" src="assets/arrow-right.svg"></img></a>
 				<button class="nav">
-					<img src="assets/menu.svg"></img>
+					<img class="invert" src="assets/menu.svg"></img>
 				</button>
 			</span>
 		`;

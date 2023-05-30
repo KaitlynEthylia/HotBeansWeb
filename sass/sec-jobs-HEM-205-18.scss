@@ -1,0 +1,45 @@
+#jobs {
+	#job-info {
+		background-color: var(--background2);
+		margin: 1em;
+		padding: 1em;
+		border-radius: 1.5em;
+
+		img {
+			border-radius: 1em;
+			height: 8em;
+		}
+
+		span, p, ul {
+			margin-left: 1em;
+			padding-bottom: 2em;
+		}
+	}
+
+	#application-modal {
+		visibility: collapse;
+		position: fixed;
+		background-color: #0004;
+		top: 0;
+		height: 100vh;
+		width: 100vw;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		div {
+			width: 40%;
+			text-align: center;
+			border-radius: 1em;
+			padding: 1em;
+			background-color: var(--background3);
+			box-shadow: var(--shadow-light);
+
+			* { margin-bottom: 1.5em; }
+		}
+
+		&.modal {
+			visibility: visible;
+		}
+	}
+}

@@ -19,6 +19,8 @@ hbw-nav {
 		top 0.4s ease-in-out,
 		visibility 0.4s;
 
+	z-index: 10;
+
 	&:not(.open) {
 		visibility: hidden;
 	}
