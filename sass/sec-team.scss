@@ -56,7 +56,7 @@
 			height: auto;
 			aspect-ratio: 1;
 			padding: 0.4em;
-			background-color: var(--background3);
+			background-color: var(--colour);
 			border-radius: 50%;
 			left: 100%;
 			position: relative;
@@ -73,9 +73,11 @@
 		p { 
 			height: 65%;
 			line-height: 1.3;
+			margin: 0 0.5em 0.4em 0.5em;
 		}
 
-		small { padding-left: 2em; }
+		small { padding-left: 2em; color: black; }
+		time { color: black; }
 	}
 }
 
@@ -85,12 +87,22 @@
 	align-items: center;
 	width: 15em;
 
-	div {
+	&> div {
 		display: inline-block;
 		background-color: var(--background2);
 		box-shadow: var(--shadow-light);
 		height: 20em;
-		padding: 0.5em;
 		border-radius: 2.5em;
+
+		div {
+			background-color: var(--colour);
+			padding-top: 0.1em;
+			hr { 
+				width: 80%; 
+			}
+			border-bottom-left-radius: 2.5em;
+			border-bottom-right-radius: 2.5em;
+			height: 2.9em;
+		}
 	}
 }

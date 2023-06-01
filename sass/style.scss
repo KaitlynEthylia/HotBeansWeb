@@ -15,12 +15,17 @@
 	font-family: "opensans", sans-serif;
 }
 
+::selection {
+	background: var(--theme);
+}
+
 html {
 	scroll-behavior: smooth;
 	scroll-padding-top: var(--header-height);
 }
 
 body {
+	overflow-x: hidden;
 	background-color: var(--background1);
 
 	&> hr {

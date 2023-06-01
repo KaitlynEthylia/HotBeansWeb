@@ -8,15 +8,18 @@
 
 	--header-height: 3em;
 
-	--shadow-light: -0.1em 0px 0.3em 0.2em #0002;
+	--shadow-light: -0.1em 0 0.3em 0.2em #0002;
+	--shadow-small: 0 0 0.5em 0.2em #0001;
 	--shadow-wide: -0.1em 0.1em 1em 0.2em rgb(var(--background3) / 0.7);
 
 	--background1: #ffffff;
-	--background2: #f7f7f7;
-	--background3: #efefef;
+	--background2: #ededed;
+	--background3: #e8e8e8;
 
 	--text-colour: #000000;
 	--text-faded: #444444;
+
+	--theme: #b418;
 }
 
 .dark {
@@ -26,6 +29,8 @@
 
 	--text-colour: #eeeeee;
 	--text-faded: #cccccc;
+
+	--theme: #f738;
 
 	img.invert {
 		filter: invert(1);

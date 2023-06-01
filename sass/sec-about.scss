@@ -20,6 +20,7 @@
 			margin: 1em;
 			border-radius: 2em;
 			background-color: var(--background2);
+			box-shadow: var(--shadow-light);
 		}
 		
 		p {
@@ -34,6 +35,7 @@
 		justify-content: flex-start;
 
 		div, div:last-child {
+			text-align: center;
 			flex-direction: column;
 			img {
 				width: 90%;
