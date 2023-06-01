@@ -53,8 +53,10 @@ createTemplate('team-member', 'sec-team', `
 		<slot name="photo"></slot>
 		<slot name="name"></slot>
 		<slot name="desc"></slot>
-		<hr />
-		<slot name="date"></slot>
+		<div>
+			<hr />
+			<slot name="date"></slot>
+		</div>
 	</div>
 `);
 

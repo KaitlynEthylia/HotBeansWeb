@@ -13,6 +13,8 @@ carousel.addEventListener('click', function(event) {
 	update(isItem);
 });
 
+var timeout;
+
 function update(newActive) {
 	const first = elems.find((elem) => elem.dataset.pos == -2);
 	const prev = elems.find((elem) => elem.dataset.pos == -1);
@@ -28,6 +30,9 @@ function update(newActive) {
 	[first, prev, current, next, last].forEach(item => {
 		item.dataset.pos = rotate(item.dataset.pos, newActivePos);
 	});
+
+	clearTimeout(timeout);
+	timeout = setTimeout(update, 10000, elems.find((elem) => elem.dataset.pos == 1));
 };
 
 function rotate(a, b) {
@@ -39,3 +44,5 @@ function rotate(a, b) {
 	}
 	return b
 }
+
+timeout = setTimeout(update, 10000, elems.find((elem) => elem.dataset.pos == 1));

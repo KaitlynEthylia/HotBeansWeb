@@ -20,6 +20,7 @@
   padding-bottom: 2em;
 }
 #jobs form {
+  margin-top: 0.5em;
   width: 55%;
   display: grid;
   grid-template-rows: 4fr 1fr;
@@ -31,12 +32,40 @@
   flex-direction: column;
 }
 #jobs form div textarea, #jobs form div input[type=date], #jobs form div input[type=text], #jobs form div input[type=tel], #jobs form div input[type=email], #jobs form div input[type=submit], #jobs form div input::file-selector-button {
+  box-sizing: border-box;
   background-color: var(--background2);
   border: 2px solid var(--background3);
-  box-shadow: var(--shadow-wide);
+  box-shadow: var(--shadow-small) inset;
   font-size: 0.8rem;
   padding: 0.3em;
   border-radius: 1em;
+}
+#jobs form div input[type=range] {
+  width: 50%;
+  background-color: none;
+  border-radius: 0.7em;
+  --fill-color: red;
+}
+#jobs form div input[type=range]::-webkit-slider-runnable-track, #jobs form div input[type=range]::-moz-range-track {
+  background-color: var(--background1);
+  height: 1.4em;
+  border: 0.1em solid var(--background3);
+  border-radius: 0.7em;
+  box-shadow: var(--shadow-small) inset;
+  width: 105%;
+}
+#jobs form div input[type=range]::-webkit-slider-thumb, #jobs form div input[type=range]::-moz-range-thumb {
+  -webkit-appearance: none;
+  background-color: var(--background3);
+  box-shadow: var(--shadow-light);
+  border: none;
+}
+#jobs form div input[type=range]::webskit-progress-value, #jobs form div input[type=range]::-mox-range-progress {
+  background-color: var(--background2);
+}
+#jobs form div input[type=submit], #jobs form div input::file-selector-button {
+  color: var(--text-color);
+  box-shadow: var(--shadow-small);
 }
 #jobs form div input[type=submit]:hover, #jobs form div input::file-selector-button:hover {
   color: var(--text-faded);
@@ -49,11 +78,11 @@
 #jobs form div textarea:disabled {
   background-color: var(--background3);
 }
-#jobs form div span {
-  display: flex;
+#jobs form div span input {
+  width: 49%;
 }
-#jobs form div span > * {
-  width: 50%;
+#jobs form div span input:last-child {
+  float: right;
 }
 #jobs form div > * {
   margin: 0.2em;
@@ -117,9 +146,14 @@
 }
 @media only screen and (max-width: 767px) {
   #jobs {
-    flex-direction: column;
     height: 350vh;
     align-items: center;
+  }
+  #jobs #job-info img {
+    float: none;
+    aspect-ratio: 16/9;
+    height: auto;
+    margin-bottom: 1em;
   }
   #jobs form, #jobs #job-info {
     display: flex;

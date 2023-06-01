@@ -19,6 +19,7 @@
   margin: 1em;
   border-radius: 2em;
   background-color: var(--background2);
+  box-shadow: var(--shadow-light);
 }
 #about div p {
   padding: 2em;
@@ -31,6 +32,7 @@
     justify-content: flex-start;
   }
   #about div, #about div:last-child {
+    text-align: center;
     flex-direction: column;
   }
   #about div img, #about div:last-child img {
